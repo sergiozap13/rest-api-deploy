@@ -1,0 +1,32 @@
+### 
+GET http://localhost:1234/movies
+
+### 
+GET http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+###
+GET http://localhost:1234/movies?genre=action
+
+###
+
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "The Godfather",
+  "year": 1975,
+  "director": "Joss Whedon",
+  "duration": 143,
+  "poster": "https://img.fruugo.com/product/7/41/14532417_max.jpg",
+  "genre": ["Action", "Adventure", "Sci-Fi"],
+  "rate": 8.0
+}
+
+### Actualziar una pelicula
+
+PATCH http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+Content-Type: application/json
+
+{
+    "year": 1994
+}
